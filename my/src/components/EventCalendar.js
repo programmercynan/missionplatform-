@@ -12,4 +12,20 @@ const EventCalendar = () => {
         { id: 2, date: '2024-11-25', title: 'Bible Study' },
         { id: 3, date: '2024-12-01', title: 'Youth Fellowship' },
     ];
-}
+
+    return (
+        <div>
+            <h2>Event Calendar</h2>
+            <ul>
+                {events.map((event) => (
+                    <li key={event.id}>
+                        <strong>{event.date}:</strong> {event.title}
+
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+};
+
+export default EventCalendar;
